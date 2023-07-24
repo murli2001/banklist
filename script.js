@@ -1,7 +1,7 @@
 'use strict';
 
 const account1 = {
-  owner: 'Ramesh Khan',
+  owner: 'Ramesh Kapoor',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -67,8 +67,8 @@ const displayMovements = function (movements, sort = false) {
     <div class="movements_row">
       <div class="movements_type movements_type--${type}">
       ${i + 1} ${type}</div>
-      </div>
       <div class="movements_value">Rs. ${mov}</div>
+      </div>
     `;
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });

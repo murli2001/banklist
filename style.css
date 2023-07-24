@@ -129,7 +129,7 @@ nav {
 }
 
 .movements_row {
-  padding: 2.25rem 4rem;
+  padding: 2.25rem 1rem;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eee;
@@ -161,6 +161,7 @@ nav {
 
 .movements_value {
   display: flex;
+  justify-content: flex-end;
   font-size: 1.7rem;
   margin-left: auto;
 }
