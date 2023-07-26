@@ -146,9 +146,9 @@ nav {
 }
 
 .movements_date {
-  font: 1.1rem;
+  font: 1.3rem;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .movements_type--deposit {
