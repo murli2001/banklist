@@ -56,6 +56,10 @@ const accounts = [account1, account2, account3, account4];
 
 //elements
 
+const navbar = document.querySelector(".navbar");
+const login = document.querySelector(".login")
+const logoPlacement = document.querySelector(".logo")
+
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance_value');
@@ -72,6 +76,7 @@ const btnTransfer = document.querySelector('.form_btn--transfer');
 const btnLoan = document.querySelector('.form_btn--loan');
 const btnClose = document.querySelector('.form_btn--close');
 const btnSort = document.querySelector('.btn--sort');
+const invalidCredentials = document.querySelector('.incorrect-credentials');
 
 const inputLoginUsername = document.querySelector('.login_input--user');
 const inputLoginPin = document.querySelector('.login_input--pin');
@@ -101,7 +106,6 @@ const displayMovements = function (acc, sort = false) {
     const m = `${dDate.getMonth() + 1}`.padStart(2, '0');
     const yy = `${dDate.getFullYear()}`.padStart(4, '0');
     const displayDate = `${d}/${m}/${yy}`;
-    // console.log(displayDate);
     const html = `
     <div class="movements_row">
       <div class="movements_type movements_type--${type}">
@@ -158,6 +162,9 @@ createUsernames(accounts);
 //update the UI as per the user login
 const updateUI = function (acc) {
   //display movements
+  navbar.setAttribute("class", "new-navbar");
+  login.setAttribute("class", "new-login")
+  logoPlacement.setAttribute("class", "new-logo")
   displayMovements(acc);
 
   // display balance
@@ -185,6 +192,9 @@ btnLogin.addEventListener('click', e => {
     inputLoginPin.blur();
     // updating ui
     updateUI(currentAccount);
+  }
+  else{
+    invalidCredentials.innerHTML = "Please enter valid credentials";
   }
 });
 

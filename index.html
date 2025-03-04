@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Banking Webapp</title>
+    <link rel="icon" href="wmremove-transformed-removebg-preview.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <p class="welcome">Log in to get started</p>
       <form class="login">
+        <img class="logo" src="wmremove-transformed-removebg-preview.png" alt="BankList">
         <input
           type="text"
-          placeholder="user"
+          placeholder="Enter Username"
           class="login-input login_input--user"
         />
         <input
           type="text"
-          placeholder="pin"
+          placeholder="Enter Pin"
           maxlength="4"
           class="login-input login_input--pin"
         />
         <button class="login_btn">Login</button>
+        <p class="incorrect-credentials"></p>
       </form>
     </nav>
     <main class="app">
