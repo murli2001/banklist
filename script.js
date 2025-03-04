@@ -59,6 +59,7 @@ const accounts = [account1, account2, account3, account4];
 const navbar = document.querySelector(".navbar");
 const login = document.querySelector(".login")
 const logoPlacement = document.querySelector(".logo")
+const invalidError = document.querySelector(".incorrect-credentials")
 
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
@@ -165,6 +166,7 @@ const updateUI = function (acc) {
   navbar.setAttribute("class", "new-navbar");
   login.setAttribute("class", "new-login")
   logoPlacement.setAttribute("class", "new-logo")
+  invalidError.innerHTML = ""
   displayMovements(acc);
 
   // display balance
